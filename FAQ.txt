@@ -1,0 +1,105 @@
+Справка к программе.
+        def check_all_entries():
+            summ = 0.0
+            summ1 = 0.0
+            for name1 in entry and entry1:
+                summ += float((entry[name1].get()))
+                print(summ)
+            for name2 in entry1:
+                summ1 += float((entry1[name2].get()))
+                print(summ1)
+            ud_sum =
+
+        def wt_snow(h_t, u_t, f_sq, f_sn):
+            k_y = 1 - f_sn / f_sq
+            wtsnow = 10 * h_t * k_y * u_t * f_sq
+            return wtsnow
+
+        def wm_wash(m, k, u_m, f_msq):
+            wmwash = 10 * m * k * u_m * f_msq
+            return wmwash
+
+        self.f_sq_e = ttk.Entry(self, justify = CENTER, width = 10)
+        self.f_sq_e.grid(row = 1, column = 1, sticky = W)
+        self.f_sq_e.insert(END, 10)
+        self.f_sq_e.bind('<Button-1>', self.selectall)
+
+    def selectall(self, event):
+        self.after(10, self.select_all, event.widget)
+
+    @staticmethod
+    def select_all(widget):
+        widget.selection_range(0, END)
+
+
+
+
+Адрес для жалоб:
+
+Если что то не работает то это печаль.
+
+
+        self.label = tk.Label(self, text = "Исходные данные для расчета:")
+        self.label.grid(row = 0, column = 0, sticky = W)
+
+        self.label = tk.Label(self, text = "F - Площадь стока коллектора, га")
+        self.label.grid(row = 1, column = 0, sticky = W)
+
+        self.label = tk.Label(self, text = "Fм - Площадь твердых покрытий, подвергающихся мойке, га")
+        self.label.grid(row = 2, column = 0, sticky = W)
+
+        self.label = tk.Label(self, text = "hд - слой осадков теплого перида года, мм")
+        self.label.grid(row = 3, column = 0, sticky = W)
+
+        self.label = tk.Label(self, text = "hт - слой осадков холодного периода года, мм")
+        self.label.grid(row = 4, column = 0, sticky = W)
+
+        self.label = tk.Label(self, text = "Uд - общий коэффициент стока дождевых вод")
+        self.label.grid(row = 5, column = 0, sticky = W)
+
+        self.label = tk.Label(self, text = "Uт - общий коэффициент стока талых вод (0,5-0,7)")
+        self.label.grid(row = 6, column = 0, sticky = W)
+
+        self.label = tk.Label(self, text = "m - удельный расход воды на мойку, принимается")
+        self.label.grid(row = 7, column = 0, sticky = W)
+
+        self.label = tk.Label(self, text = "      0,5 для ручной и 1,2-1,5 л/м2 для механизированной мойки")
+        self.label.grid(row = 8, column = 0, sticky = W)
+
+        self.label = tk.Label(self, text = "k - среднее количество моек в году (100-150)")
+        self.label.grid(row = 9, column = 0, sticky = W)
+
+        self.label = tk.Label(self, text = "Uм - коэффициент стока поливомоечных вод (0,5)")
+        self.label.grid(row = 10, column = 0, sticky = W)
+
+
+
+
+
+
+
+
+
+
+
+
+        tab_parent = ttk.Notebook(self)
+        tab1 = ttk.Frame(tab_parent)
+        tab2 = ttk.Frame(tab_parent)
+
+        tab_parent.add(tab1, text = "п.7.2. Определение среднегодовых объемов поверхностных сточных вод"
+                       "\n"
+                      )
+        tab_parent.add(tab2, text = "п.7.3. Определение расчетных объемов поверхностных сточных вод "
+                      "\nпри отведении на очистку"
+                      )
+
+        tab_parent.grid(row = 1, sticky = W)
+        tab_parent.grid(row = 2, sticky = W)
+
+        self.label = tk.Label(self, text = "п.7.3у")
+        self.label.grid(row = 5, column = 1, sticky = E)
+        self.label = tk.Label(self, text = "п.7.3у")
+        self.label.grid(row = 1, column = 0, sticky = E)
+        self.label = tk.Label(self, text = "п.7.3у")
+        self.label.grid(row = 2, column = 1, sticky = E)
